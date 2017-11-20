@@ -1,0 +1,23 @@
+<div id="detail-thread-header">
+  <h3>{{threadTitle}}</h3>
+  <button (click)="navigateBack()">Back</button>
+</div>
+
+<div id="detail-thread-content">
+  <div>Kategori : {{threadCategory}}</div>
+  <p>{{threadContent}}</p>
+
+  <div id="detail-thread-comment-container">
+    <h4>A lot of comments below here .... </h4>
+    <div class="comments" *ngFor="let comm of threadComments | async">
+      {{comm}}
+    </div>
+  </div>
+
+</div>
+
+
+
+<div id="detail-thread-comment-input-container">
+  <input #comment/> <button (click)="pushComment(comment.value); comment.value = '' ">Comment</button>
+</div>

@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FirebaseApp} from "angularfire2";
+import * as firebase from "firebase";
+import {AngularFireDatabase} from "angularfire2/database";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent implements OnInit{
+
+  constructor(private af : AngularFireDatabase){
+
+  }
+
+
+  ngOnInit(): void {
+
+  }
 }

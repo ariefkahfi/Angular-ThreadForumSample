@@ -1,0 +1,39 @@
+<div id="threads-search" class="clearfix">
+  <h3>Thread List</h3>
+
+  <div id="threads-search-form">
+    <input type="text" #search placeholder="Search a thread by title" (keyup.enter)="onTitleSearch(search.value)"/>
+    <!--<button>Search</button>-->
+  </div>
+
+</div>
+
+<div id="threads-content-container">
+  <div class="card-threads" *ngFor="let a of listOfThreads | async">
+
+    <h2>{{a.title}}</h2>
+
+
+
+    <div>
+      Kategori : {{a.category}}
+    </div>
+
+    <div>
+      <p>{{a.content}}</p>
+    </div>
+
+    <div>
+      <ul type="none">
+        <li *ngFor="let i of a.hashtags">
+          {{i}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="go-detail">
+      <button (click)="goDetail(a.key)">Detail</button>
+    </div>
+
+  </div>
+</div>

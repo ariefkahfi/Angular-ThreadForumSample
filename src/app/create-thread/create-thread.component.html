@@ -1,0 +1,62 @@
+<div id="create-thread-header">
+  <h3>Create a Thread</h3>
+</div>
+
+<div id="create-thread-container">
+  <div id="create-thread-form-wrapper">
+
+    <button (click)="switchCat()">Switch category</button>
+
+    <form #threadForm="ngForm">
+
+      <table>
+
+        <tr>
+          <td>Thread category</td>
+          <td *ngIf="isSwitch === false"><input type="text" placeholder="Category" required name="threadCategory" [(ngModel)]="threadCategory"/></td>
+          <td *ngIf="isSwitch === true">
+            <select name="threadCategory" [(ngModel)]="threadCategory" required>
+              <option *ngFor="let c of listOfCategory" [value]="c">{{c}}</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Thread title</td>
+          <td><input type="text" placeholder="Title" required name="threadTitle" [(ngModel)]="threadTitle"/></td>
+        </tr>
+
+        <tr>
+          <td>Thread content</td>
+          <td><textarea name="threadContent" id="" cols="30" rows="8" [(ngModel)]="threadContent" required></textarea></td>
+        </tr>
+
+        <tr>
+          <td>Hashtags</td>
+          <td><input type="text" #hashtag placeholder="Hashtags"/> <button (click)="addHashtag(hashtag.value); hashtag.value= ''; ">Add</button> </td>
+        </tr>
+
+        <tr>
+          <td>Hashtags-List</td>
+
+          <td>
+            <ul>
+              <li *ngFor="let i of listOfHash; let idx = index">
+                <span>{{i}}</span> | <span (click)="deleteHash(idx)" style="cursor:pointer;">Delete</span>
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button [disabled] = "!threadForm.form.valid || listOfHash.length <= 0" (click)="postThread(threadForm , hashtag)">Post this</button>
+          </td>
+        </tr>
+
+      </table>
+
+    </form>
+
+  </div>
+</div>

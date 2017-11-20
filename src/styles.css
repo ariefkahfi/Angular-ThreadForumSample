@@ -1,1 +1,246 @@
-/* You can add global styles to this file, and also import other style files */
+html ,body{
+  margin : 0;
+  padding : 0;
+  height: 100%;
+  min-width: 1000px;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/*nav style*/
+nav{
+  background-color: #343A40;
+  padding : 1%;
+}
+
+#left-nav{
+  color : white;
+  margin-top : 5px;
+  display: inline-block;
+}
+
+#left-nav h3 {
+  display: inline-block;
+  margin : 0;
+}
+
+.a-left-nav{
+  margin-left : 10px;
+}
+
+.clearfix:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+#right-nav{
+  float: right;
+}
+#right-nav button{
+  border : 1px solid #28A745;
+  background-color: #343A40;
+  color : white;
+  border-radius: 5px;
+  height:34px;
+  cursor: pointer;
+  transition: background-color 500ms;
+  width: 100px;
+}
+#right-nav button:hover{
+  background-color: #28A745;
+}
+/*nav style*/
+
+/*container style*/
+#container{
+  display: flex;
+  min-height:100%;
+  /*background-color: #28A745;*/
+}
+/*container style*/
+
+
+/*left-container style*/
+#left-container{
+  width: 25%;
+  /*padding : 10px;*/
+  /*background: linear-gradient(to  right ,#1FC0BF , #24C5CB , #35B9E8);*/
+  /*background-color: #36B8E9;*/
+  background-image: url("./assets/md1.jpg");
+}
+/*left-container style*/
+
+/*right-container style*/
+#right-container{
+  width: 75%;
+  padding : 10px;
+  background-color: rgba(2,2,2,0.1);
+}
+/*right-container style*/
+
+/*left-content style*/
+/*#6610F2*/
+#left-content{
+  color : white;
+}
+#left-content h3{
+  margin : 0;
+  padding : 10px;
+}
+.left-content-a{
+  text-decoration: none;
+  color : white;
+  font-weight:bold;
+  cursor: pointer;
+}
+.ul{
+  padding-left : 5px;
+}
+/*left-content style*/
+
+
+
+/*right-content style*/
+#right-content h1{
+  margin : 0;
+  padding : 5px;
+  font-family: 'Lobster', cursive;
+  color : white;
+}
+#right-content-header p{
+  font-size: 30px;
+
+  padding-left : 10%;
+  padding-right : 10%;
+
+  font-family: 'Lobster', cursive;
+  color : white;
+}
+#right-content-header{
+  /*background-image: url("./assets/md1.jpg");*/
+  background-color: #343A40;
+  text-align: center;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+#right-content{
+
+}
+#right-content-container{
+  border-radius: 2px;
+}
+/*right-content style*/
+
+/*threads-container*/
+#threads-search h3{
+  display: inline-block;
+  margin : 0;
+  margin-top : 5px;
+}
+#threads-search{
+  background-color: #343A40;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+
+  padding : 5px;
+  color : white;
+}
+#threads-search-form{
+  float : right;
+}
+#threads-search-form button{
+  border : 1px solid #28A745;
+  background-color: #343A40;
+  color : white;
+  border-radius: 5px;
+  height:34px;
+  cursor: pointer;
+  transition: background-color 500ms;
+  width: 100px;
+}
+#threads-search-form button:hover{
+  background-color: #28A745;
+}
+#threads-content-container{
+
+}
+
+
+.card-threads h2{
+  background-color: dodgerblue;
+  color : white;
+  padding : 5px;
+  margin : 0;
+}
+.card-threads {
+  background-color: white;
+  margin-top : 5px;
+  margin-bottom : 5px;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+
+.go-detail {
+  text-align: right;
+  padding : 5px;
+  background-image: url('./assets/md1.jpg');
+}
+/*threads-container*/
+
+/*create-thread*/
+#create-thread-header{
+  color : white;
+  padding : 5px;
+  margin-bottom : 10px;
+  background-color: #343A40;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+#create-thread-header h3{
+  margin : 0;
+}
+#create-thread-container{
+  background-color: white;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+/*create-thread*/
+
+/*form-wrapper*/
+#create-thread-form-wrapper{
+  padding : 5px;
+}
+/*form-wrapper*/
+
+/*detail-thread*/
+#detail-thread-header {
+  color : white;
+  background-color : #343A40;
+}
+#detail-thread-header h3{
+  display: inline-block;
+}
+#detail-thread-content{
+  background-color: white;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+  padding-bottom : 5px;
+}
+#detail-thread-comment-container{
+  background-color : lightgrey;
+  padding : 10px;
+  margin : 10px;
+}
+#detail-thread-comment-input-container{
+  background-color: #343A40;
+  padding : 10px;
+}
+.comments{
+  background-color: white;
+  margin-bottom : 5px;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+  padding : 5px;
+}
+/*detail-thread*/
+
+
